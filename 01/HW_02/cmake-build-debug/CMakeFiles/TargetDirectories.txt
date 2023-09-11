@@ -1,0 +1,3 @@
+F:/Storage/Documents_Aleks/Study/Netology/CPP/04_CPPL-7/01/HW_02/cmake-build-debug/CMakeFiles/HW_02.dir
+F:/Storage/Documents_Aleks/Study/Netology/CPP/04_CPPL-7/01/HW_02/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Storage/Documents_Aleks/Study/Netology/CPP/04_CPPL-7/01/HW_02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
