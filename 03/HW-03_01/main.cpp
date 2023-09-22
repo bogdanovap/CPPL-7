@@ -1,5 +1,11 @@
 #include <iostream>
 
+//Чтобы даже случайно не удалось скопировать массив,
+// вы можете запретить конструктор копирования и оператор присваивания.
+// В противном случае, пользователь класса может случайно скопировать указатель
+// на выделенную память, и тогда при уничтожении обоих объектов
+// произойдет двойное освобождение памяти
+
 class smart_array {
 private:
     int size;
@@ -10,6 +16,9 @@ public:
     ~smart_array();
     void add_element(int element);
     int get_element(int index);
+    
+    smart_array(const smart_array &rhs) = delete;
+    smart_array& operator=(const smart_array &rhs) = delete;
 };
 
 smart_array::smart_array(int size) {
