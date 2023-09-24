@@ -9,7 +9,6 @@ public:
     CMySuperFunctor() : sum_(0), count_(0) {}
 
     void operator()(int number) {
-        // Проверяем, делится ли число на 3
         if (number % 3 == 0) {
             sum_ += number;
             count_++;
@@ -29,12 +28,11 @@ public:
 int main() {
     CMySuperFunctor functor;
     std::string input;
-    std::cout << "Введите числа: ";
-
-    std::getline(std::cin, input);
-
-    std::istringstream iss(input);
     int num;
+
+    std::cout << "Введите числа: ";
+    std::getline(std::cin, input);
+    std::istringstream iss(input);
 
     while (iss >> num) {
         functor(num);
