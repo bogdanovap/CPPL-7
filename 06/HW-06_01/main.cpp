@@ -39,8 +39,8 @@ int main() {
               charCountVector.end(),
               compare_pair);
 
-    for (const auto& pair : charCountVector) {
-        std::cout << pair.first << ": " << pair.second << std::endl;
+    for (const auto& [f, s] : charCountVector) {
+        std::cout << f << ": " << s << std::endl;
     }
 
     return 0;
