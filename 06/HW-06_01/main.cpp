@@ -25,10 +25,13 @@ int main() {
     }
 
     // переносим словарь в вектор для сортировки
-    std::vector<std::pair<char, int>> charCountVector;
-    for (const auto& pair : charCount) {
-        charCountVector.push_back(pair);
-    }
+//    std::vector<std::pair<char, int>> charCountVector;
+//    for (const auto& pair : charCount) {
+//        charCountVector.push_back(pair);
+//    }
+    // copy constructor
+    std::vector<std::pair<char, int>> charCountVector(charCount.begin(), charCount.end());
+
 
     // cортируем вектор
     // для сравнения пар используем отдельную функцию - compare_pair
