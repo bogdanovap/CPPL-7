@@ -3,8 +3,8 @@
 #include <vector>
 #include <list>
 
-template <typename Container>
-void print_container(const Container& container) {
+template <typename TContainer>
+void print_container(const TContainer& container) {
     auto element = container.begin();
     while (true) {
         std::cout << *element;
