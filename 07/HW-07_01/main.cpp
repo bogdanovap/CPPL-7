@@ -18,7 +18,8 @@ void remove_duplicates(std::vector<T>& vec) {
 //    for (const int& value : vec) {
 //        std::cout << value << " ";
 //    }
-    vec.erase(std::unique(vec.begin(), vec.end()), vec.end());
+    auto unique_iterator = std::unique(vec.begin(), vec.end());
+    vec.erase(unique_iterator, vec.end());
 }
 
 int main() {
