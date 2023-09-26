@@ -11,7 +11,7 @@ TEST_CASE("test list", "[list]"){
     SECTION("simple test of add and pop functions"){
         REQUIRE(lst.Empty() == true);
         lst.PushBack(1);
-        CHECK(lst.GetLastNode().value == 1);
+        CHECK(lst[lst.Size()-1] == 1);
         lst.PushFront(2);
         lst.Clear();
         REQUIRE(lst.Empty() == true);

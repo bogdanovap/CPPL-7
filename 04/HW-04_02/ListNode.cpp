@@ -74,13 +74,23 @@ public:
             delete extractPrev(current);
         }
     }
-    ListNode GetFirstNode()
+    int operator[](int index) const
     {
-        return *m_head->next;
-    }
-    ListNode GetLastNode()
-    {
-        return *m_tail->prev;
+        if (index >= m_size || index < 0)
+        {
+            throw std::out_of_range("out of range");
+        }
+
+        auto current = m_head->next;
+        if (index==0)
+            return current->value;
+
+        for (auto i = 0; i <= index; i++)
+        {
+            current = current->next;
+        }
+
+        return current->value;
     }
 
 private:
