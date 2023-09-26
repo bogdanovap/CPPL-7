@@ -85,7 +85,7 @@ public:
         if (index==0)
             return current->value;
 
-        for (auto i = 0; i <= index; i++)
+        for (auto i = 0; i < index; i++)
         {
             current = current->next;
         }

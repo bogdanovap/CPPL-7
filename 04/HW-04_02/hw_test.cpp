@@ -13,6 +13,9 @@ TEST_CASE("test list", "[list]"){
         lst.PushBack(1);
         CHECK(lst[lst.Size()-1] == 1);
         lst.PushFront(2);
+        CHECK(lst[0] == 2);
+        CHECK(lst[lst.Size()-1] == 1);
+        CHECK_THROWS(lst[lst.Size()]);
         lst.Clear();
         REQUIRE(lst.Empty() == true);
         std::string error_msg = "list is empty";
